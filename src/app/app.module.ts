@@ -22,7 +22,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {MatStepperModule} from '@angular/material/stepper';
-//import { ReactiveFormsModule } from '@angular/forms';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {Component, TemplateRef, ViewChild} from '@angular/core';
+import {MatBottomSheet, MatBottomSheetConfig} from '@angular/material/bottom-sheet';
+
 
 const routes:Routes=[
   {path:'home',component:HomeComponent},
@@ -49,7 +52,7 @@ const routes:Routes=[
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     MatButtonModule,MatCardModule,MatIconModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatToolbarModule,MatStepperModule
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatToolbarModule,MatStepperModule,MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
