@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { ContactComponent} from "../contact/contact.component"
+import { RouterModule } from '@angular/router';
 
 export interface Person{
   fname:string;lname:string;address1:string;address2:string;city:string;postal:string;state:string

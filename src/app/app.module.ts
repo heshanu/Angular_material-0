@@ -18,12 +18,17 @@ import { SelectorMatcher } from '@angular/compiler';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes:Routes=[
   {path:'home',component:HomeComponent},
   {path:'profile',component:ProfileComponent},
   {path:'contact',component:ContactComponent},
-  {path:'aboutUs',component:AboutUsComponent}
+  {path:'aboutUs',component:AboutUsComponent},
+  {path:'aboutUs/login',component:LoginComponent},
+  {path:'aboutUs/register',component:RegisterComponent}
 ]
 
 
@@ -33,14 +38,17 @@ const routes:Routes=[
     HomeComponent,
     ProfileComponent,
     ContactComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MatButtonModule,MatCardModule,MatIconModule,FormsModule,ReactiveFormsModule,MatFormFieldModule,MatInputModule
+    MatButtonModule,MatCardModule,MatIconModule,FormsModule,
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
