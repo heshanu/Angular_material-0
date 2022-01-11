@@ -16,11 +16,13 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { Routes,RouterModule } from '@angular/router';
 import { SelectorMatcher } from '@angular/compiler';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {MatStepperModule} from '@angular/material/stepper';
+//import { ReactiveFormsModule } from '@angular/forms';
 
 const routes:Routes=[
   {path:'home',component:HomeComponent},
@@ -30,7 +32,6 @@ const routes:Routes=[
   {path:'aboutUs/login',component:LoginComponent},
   {path:'aboutUs/register',component:RegisterComponent}
 ]
-
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ const routes:Routes=[
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     MatButtonModule,MatCardModule,MatIconModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatToolbarModule
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatToolbarModule,MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
